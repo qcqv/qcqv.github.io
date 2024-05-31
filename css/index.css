@@ -1,0 +1,40 @@
+body {
+    background-color: black;
+    display: flex; /* Make the body a flex container */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+@font-face {
+    font-family: 'Deadknight';
+    src: url('/fonts/Deadknight-MAAOp.ttf') format('truetype');
+    /* Add additional src lines for other formats if needed */
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container {
+    text-align: center; /* Center the content horizontally */
+    color: white; /* Set text color */
+}
+
+img {
+    width: 215px;
+    height: 275px;
+}
+
+.names {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    font-size: 1.5em;
+    font-family: 'Deadknight', sans-serif;
+}
+
+.name:hover{
+    text-decoration: underline red;
+}
+
+.name {
+    color: red;
+    text-decoration: none; /* Remove underline by default */
+}
