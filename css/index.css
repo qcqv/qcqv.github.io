@@ -1,40 +1,80 @@
 body {
     background-color: black;
-    display: flex; /* Make the body a flex container */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    align-items: center; /* Center content horizontally */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    box-sizing: border-box;
 }
 
 @font-face {
     font-family: 'Deadknight';
     src: url('/fonts/Deadknight-MAAOp.ttf') format('truetype');
-    /* Add additional src lines for other formats if needed */
     font-weight: normal;
     font-style: normal;
 }
 
 .container {
-    text-align: center; /* Center the content horizontally */
-    color: white; /* Set text color */
+    text-align: center;
+    color: white;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px; /* Add space at the top */
 }
 
 img {
     width: 215px;
     height: 275px;
+    display: block;
+    margin: 0 auto; /* Center the image horizontally */
 }
 
 .names {
-    list-style-type: none; /* Remove bullet points */
-    padding: 0; /* Remove default padding */
+    list-style-type: none;
+    padding: 0;
     font-size: 1.5em;
     font-family: 'Deadknight', sans-serif;
-}
-
-.name:hover{
-    text-decoration: underline red;
+    margin: 20px 0; /* Add some space above and below the list */
+    text-align: center; /* Center the text */
 }
 
 .name {
     color: red;
-    text-decoration: none; /* Remove underline by default */
+    text-decoration: none;
+    display: block;
+    margin: 10px 0;
+}
+
+.name:hover {
+    text-decoration: underline red;
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    img {
+        width: 100%;
+        max-width: 215px;
+        height: auto;
+    }
+    .names {
+        font-size: 1.2em;
+    }
+    .name {
+        margin: 8px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .names {
+        font-size: 1em;
+    }
+    .name {
+        margin: 6px 0;
+    }
 }
