@@ -1,55 +1,42 @@
 body {
     background-color: black;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Align content to the top */
-    align-items: center; /* Center content horizontally */
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    box-sizing: border-box;
+    display: flex; /* Make the body a flex container */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
 }
 
 @font-face {
     font-family: 'Deadknight';
     src: url('/fonts/Deadknight-MAAOp.ttf') format('truetype');
+    /* Add additional src lines for other formats if needed */
     font-weight: normal;
     font-style: normal;
 }
 
 .container {
-    text-align: center;
-    color: white;
-    width: 100%;
-    max-width: 600px;
-    margin-top: 20px; /* Add space at the top */
+    text-align: center; /* Center the content horizontally */
+    color: white; /* Set text color */
 }
 
 img {
     width: 215px;
     height: 275px;
-    display: block;
-    margin: 0 auto; /* Center the image horizontally */
 }
 
 .names {
-    list-style-type: none;
-    padding: 0;
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
     font-size: 1.5em;
     font-family: 'Deadknight', sans-serif;
-    margin: 20px 0; /* Add some space above and below the list */
-    text-align: center; /* Center the text */
+}
+
+.name:hover{
+    text-decoration: underline red;
 }
 
 .name {
     color: red;
-    text-decoration: none;
-    display: block;
-    margin: 10px 0;
-}
-
-.name:hover {
-    text-decoration: underline red;
+    text-decoration: none; /* Remove underline by default */
 }
 
 /* Media queries for mobile responsiveness */
