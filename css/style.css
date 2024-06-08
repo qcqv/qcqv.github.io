@@ -115,7 +115,9 @@ body, html {
 /* Media queries for mobile responsiveness */
 @media (max-width: 768px) {
     .content-box {
-        width: 100%;
+        width: 150%;
+        margin-left: -25%;
+        margin-right: -25%;
     }
     .username {
         font-size: 1.5em;
@@ -124,7 +126,7 @@ body, html {
         font-size: 1em;
     }
     #volume-slider {
-        width: 90%;
+        width: 100%;
     }
 }
 
@@ -136,3 +138,5 @@ body, html {
         font-size: 0.9em;
     }
 }
+
+/* Start https://www.cursors-4u.com */ * {cursor: url(https://cur.cursors-4u.net/symbols/sym-1/sym46.cur), auto !important;} /* End https://www.cursors-4u.com */
