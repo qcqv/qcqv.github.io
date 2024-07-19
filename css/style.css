@@ -82,7 +82,8 @@ body, html {
 }
 
 #volume-slider {
-    width: 200px;
+    width: 100%; /* Make it responsive */
+    max-width: 200px; /* Set a max width */
 }
 
 .instagram-icon {

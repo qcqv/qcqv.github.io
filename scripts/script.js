@@ -11,8 +11,11 @@ document.getElementById('click-area').addEventListener('click', function() {
 });
 
 // Volume control
-document.getElementById('volume-slider').addEventListener('input', function() {
-    const volume = this.value;
-    const video = document.getElementById('video-background');
-    video.volume = volume;
+document.addEventListener('DOMContentLoaded', function() {
+    const volumeSlider = document.getElementById('volume-slider');
+    volumeSlider.addEventListener('input', function() {
+        const volume = this.value;
+        const video = document.getElementById('video-background');
+        video.volume = volume;
+    });
 });
