@@ -3,38 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tax</title>
+    <title>@tax</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" type="image/x-icon" href="videos&imgs/icon.gif"/>
-    <script type="text/javascript" src="scripts/snowstorm.js"></script>
-    <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
+    <!-- <script type="text/javascript" src="scripts/snowstorm.js"></script> -->
+    <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'></script>
+    <style>
+        body {
+            background-image: url('https://images.squarespace-cdn.com/content/v1/555f43ace4b09cfed988524e/1596254975059-0P5P6RHEA7EAR9925827/screenshot158.jpg?format=1500w');
+            background-size: cover;
+            background-position: center;
+        }
+        .username {
+            font-family: 'Nosifer', cursive;
+            font-size: 1.7em;
+        }
+        .description {
+            display: inline-block; /* Ensures the container respects the height */
+            min-height: 1em; /* Adjust to match the font size */
+            line-height: 1em; /* Ensures vertical alignment */
+            font-size: 1em; /* Matches the style for your text */
+        }
+        .content-box {
+            box-shadow: 0 0 5px red, 0 0 10px red, 0 0 15px red;
+        }
+    </style>
+    <style type="text/css">* {cursor: url(https://cur.cursors-4u.net/others/oth-8/oth704.cur), auto !important;}</style><a href="https://www.cursors-4u.com/cursor/2011/11/29/bloody-knife.html" target="_blank" title="Bloody Knife"><img src="https://cur.cursors-4u.net/cursor.png" border="0" alt="Bloody Knife" style="position:absolute; top: 0px; right: 0px;" /></a>
 </head>
 <body>
     <div class="container" id="click-area">
         <div class="center-text" id="center-text">Click Anywhere</div>
         <div class="hidden-content" id="hidden-content">
             <div class="content-box">
-                <img src="videos&imgs/tax.png" class="profile-img">
+                <img src="videos&imgs/tax.gif" class="profile-img">
                 <h1 class="username">tax</h1>
-                <p class="description">フィオナ</p>
+                <!-- Updated description -->
+                <div class="description" id="typewriter-description"></div><br><br>
                 <a href="https://www.instagram.com/ihytax" target="_blank">
                     <div class="instagram-icon">
                         <i class="fa fa-instagram"></i>
                     </div>
-                </a>    
+                </a>
             </div>
+            
             <div class="volume-control">
                 <label for="volume-slider">Volume:</label>
                 <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5">
             </div>
         </div>
     </div>
-    
-    <video id="video-background" loop playsinline>
-        <source src="/videos&imgs/Smashing Pumpkins - Tarantula (Official Music Video) _ Warner Vault.mp4" type="video/mp4">
-    </video>
+
+    <!-- <video id="video-background" loop playsinline>
+        <source src="" type="video/mp4">
+    </video> -->
+
+    <audio id="audio-background" loop>
+        <source src="videos&imgs/LUCKI - MORE THAN EVER [Official Music Video].mp3" type="audio/mp3">
+    </audio>
 
     <script src="scripts/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typewriter-effect@latest/dist/core.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="halloween-bats.js"></script>
+	<script type="text/javascript">
+		window.halloweenBats = $.halloweenBats({});
+	</script>
+
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function() {
+            var app = document.getElementById('typewriter-description');
+            
+            var typewriter = new Typewriter(app, {
+                loop: true,
+                delay: 75,
+                deleteSpeed: 50,
+            });
+            
+            typewriter
+                .typeString('うそつき')
+                .pauseFor(1500)
+                .deleteAll()
+                .start();
+        });
+    </script>
+
+    <script>
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        const titleString = 'tax'; // The text to display after '@'
+        const fullTitle = '@' + titleString; // The complete title with '@'
+        
+        document.title = fullTitle; // Set the initial title
+
+        async function typewriteTitle() {
+            while (true) { // Loop indefinitely
+                // Typing effect
+                for (let i = 0; i <= titleString.length; i++) {
+                    document.title = '@' + titleString.slice(0, i); // Include '@' in the title
+                    await sleep(250); // Increase the delay to slow down typing
+                }
+                // Deleting effect
+                for (let i = titleString.length; i >= 0; i--) {
+                    document.title = '@' + titleString.slice(0, i); // Include '@' in the title
+                    await sleep(250); // Increase the delay to slow down deleting
+                }
+            }
+        }
+
+        typewriteTitle(); // Start the typing effect
+    </script>
+
 </body>
 </html>
