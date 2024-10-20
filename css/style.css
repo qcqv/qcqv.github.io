@@ -92,28 +92,28 @@ body, html {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 48px;
-    width: 48px; /* Adjust size as necessary */
-    height: 48px; /* Adjust size as necessary */
+    width: 48px; 
+    height: 48px; 
     text-align: center;
-    line-height: 48px; /* Adjust size as necessary */
+    line-height: 48px; 
     cursor: pointer;
 }
 
 .instagram-icon i {
-    color: transparent; /* Ensure the icon itself is transparent */
+    color: transparent; 
     background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888, #e1306c);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-/* GitHub icon styling */
+
 .github-icon {
-    color: #181717; /* GitHub's official black color */
+    color: #181717; 
     font-size: 48px;
     margin: 10px;
 }
 
-/* Media queries for mobile responsiveness */
+
 @media (max-width: 768px) {
     .content-box {
         width: 150%;
