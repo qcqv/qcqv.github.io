@@ -21,10 +21,10 @@
             font-size: 1.7em;
         }
         .description {
-            display: inline-block; /* Ensures the container respects the height */
-            min-height: 1em; /* Adjust to match the font size */
-            line-height: 1em; /* Ensures vertical alignment */
-            font-size: 1em; /* Matches the style for your text */
+            display: inline-block; 
+            min-height: 1em; 
+            line-height: 1em; 
+            font-size: 1em; 
         }
         .content-box {
             box-shadow: 0 0 5px red, 0 0 10px red, 0 0 15px red;
@@ -39,9 +39,9 @@
             <div class="content-box">
                 <img src="videos&imgs/tax.gif" class="profile-img">
                 <h1 class="username">tax</h1>
-                <!-- Updated description -->
+    
                 <div class="description" id="typewriter-description"></div><br><br>
-                <a href="https://www.instagram.com/ihytax" target="_blank">
+                <a href="https://www.instagram.com/kswbx" target="_blank">
                     <div class="instagram-icon">
                         <i class="fa fa-instagram"></i>
                     </div>
@@ -94,27 +94,26 @@
             return new Promise(resolve => setTimeout(resolve, ms));
         }
 
-        const titleString = 'tax'; // The text to display after '@'
-        const fullTitle = '@' + titleString; // The complete title with '@'
+        const titleString = 'tax'; 
+        const fullTitle = '@' + titleString; 
         
-        document.title = fullTitle; // Set the initial title
+        document.title = fullTitle; 
 
         async function typewriteTitle() {
-            while (true) { // Loop indefinitely
-                // Typing effect
+            while (true) { 
                 for (let i = 0; i <= titleString.length; i++) {
-                    document.title = '@' + titleString.slice(0, i); // Include '@' in the title
-                    await sleep(250); // Increase the delay to slow down typing
+                    document.title = '@' + titleString.slice(0, i); 
+                    await sleep(250); 
                 }
-                // Deleting effect
+               
                 for (let i = titleString.length; i >= 0; i--) {
-                    document.title = '@' + titleString.slice(0, i); // Include '@' in the title
-                    await sleep(250); // Increase the delay to slow down deleting
+                    document.title = '@' + titleString.slice(0, i); 
+                    await sleep(250);
                 }
             }
         }
 
-        typewriteTitle(); // Start the typing effect
+        typewriteTitle(); 
     </script>
 
 </body>
