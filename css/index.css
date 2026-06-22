@@ -13,7 +13,7 @@
 }
 
 body{
-    background-color: #000;
+    background-color: #ff0000;
     background: url("/media/imgs/background.jpeg") center center / cover no-repeat fixed;
     min-height: 100svh;
     background-repeat: no-repeat;
